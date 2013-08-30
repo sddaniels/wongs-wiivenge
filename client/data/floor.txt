@@ -1,0 +1,31 @@
+// NOTE: only triangles and quads are currently supported
+//       i.e. vertices must be 3 or 4
+
+// number of polygons
+2
+
+// texture table
+1
+0
+data/slate-floor.bmp
+
+// example polygon format
+// ===============================
+//
+// vertices texid  : # of vertices & texture table lookup
+// x y z           : normal vector
+// x y z s t       : vertex & texture coordinates
+// " " " " "
+
+// floor
+3 0
+0.0 1.0 0.0
+-5.0  0.0   0.0 0.0 9.0
+-5.0  0.0 -10.0 0.0 0.0
+ 5.0  0.0 -10.0 9.0 0.0
+
+3 0
+0.0 1.0 0.0
+-5.0  0.0   0.0 0.0 9.0
+ 5.0  0.0   0.0 9.0 9.0
+ 5.0  0.0 -10.0 9.0 0.0

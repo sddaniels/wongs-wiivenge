@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Shea Daniels" />
+
+	<title>Shea Daniels - Final Project Readme</title>
+
+	     
+	<style type="text/css">
+	
+		img { border: none; text-decoration: none; }
+		
+		body {
+			font-family: "Verdana", "Arial", Sans-Serif;
+			font-size: 75%;
+			margin: 0;
+			padding: 0;
+		}
+		
+		#wholePage {
+			width: 827px;
+			margin: 0 auto;
+			padding: 0;
+		}
+		
+		#pageHeader h1 {
+			height: 303px;
+			width: 827px;
+			background: url("header.gif") no-repeat;
+		}
+		
+		#pageHeader h1 span {
+			display: none;
+		}
+		
+		#pageContent {
+			position: relative;
+			width: 700px;
+			left: 50px;
+		}
+		
+		#pageContent p, #pageContent img {
+			position: relative;
+			left: 25px;
+		}
+		
+		#clearMe {
+			clear: both;
+		}
+		
+		#pageFooter {
+			padding-top: 100px;
+		}
+	
+	</style>
+	
+</head>
+
+<body>
+
+	<div id="wholePage">
+	
+		<div id="pageHeader">
+			<h1><span>Shea Daniels</span></h1>
+		</div>
+		
+		<div id="pageContent">
+			
+			<h2>Final Project Readme</h2>
+			
+				<h3>Included Folders</h3>
+				
+				<ul>
+					<li>client - Source code for the game client</li>
+					<li>darwiin - Source code and executable for the Wiimote driver</li>
+					<li>game_engine - Source code for the game engine</li>
+					<li>jogl mac osx - Java OpenGL bindings for Macintosh OSX</li>
+					<li>jogl windows - Java OpenGL bindings for Microsoft Windows</li>
+					<li>sockets - Source code for the client-server networking</li>
+				</ul>
+			
+				<h3>How to Set Up Wong's Wiivenge</h3>
+				
+				<p>We developed the project using the free Eclipse IDE. Unfortunately
+				   we haven't been able to get the project to run outside of Eclipse
+				   becuase of problems setting the classpath and linking to the native
+				   libraries necessary to use OpenGL with Java. So if you would like
+				   to run the project, the best way is to download the program from
+				   Eclipse.org. No installation is necessary, and it should run as
+				   long as you have the correct version of Java from java.sun.com.</p>
+				   
+				<p>Once Eclipse is unzipped, follow these directions:</p>
+				
+				<ol>
+					<li>Run Eclipse.</li>
+					<li>When the popup dialog asks where you would like to place your
+					    workspace, select any directory you wish to work from.</li>
+					<li>Go to File -> New and select Project.</li>
+					<li>Select "Java Project" and click Next.</li>
+					<li>Name the project anything you like and click Finish.</li>
+					<li>The project you created should appear in the Package Expolorer
+					    window on the left side of the screen. Right click on the project
+					    icon and select Import.</li>
+					<li>Select "File System" and click Next.</li>
+					<li>Click Browse on the right side of the dialog.</li>
+					<li>Select the directory where you unzipped the contents of this
+					    final project.</li>
+					<li>Click the + icon or the arrow next to the folder to expand the
+					    contents of the folder.</li>
+					<li>Click on the check boxes next to "client", "game_engine", and
+					    "sockets". This will select all of the contents of these folders
+					    for import.</li>
+					<li>Click Finish. The necessary source files should now appear under
+					    the project in the Package Explorer.</li>
+					<li>Right click on the project icon again and select Properties.</li>
+					<li>Click on "Java Build Path".</li>
+					<li>Select the Libraries tab.</li>
+					<li>Click the "Add External Jars" button.</li>
+					<li>Again go to the directory where you unzipped the contents of this
+					    final project. If you're running Windows, go into the "jogl windows"
+					    folder. If you're running Mac OSX, go into the "jogl mac osx" folder.
+					    Select "jogl.jar" and click Open.</li>
+					<li>Click the + icon or the arrow next to jogl.jar to expand its properties.</li>
+					<li>Select "Native library location".</li>
+					<li>Click the Edit button.</li>
+					<li>Click the External Folder button.</li>
+					<li>Go back to the directory you selected that contains jogl.jar and click
+					    Choose.</li>
+					<li>Click the OK button.</li>
+					<li>Click the OK button to close the project properties window.</li>
+					<li>Go to the Run menu and select "Run...".</li>
+					<li>Select "Java Application" and click the new button which looks
+					    like a page with a + symbol on the upper right.</li>
+				    <li>Give the configuration a name like "GameServer".</li>
+				    <li>Click the Search button under "Main class:".</li>
+				    <li>Double click GameServer.</li>
+				    <li>Click the Run button to run the game's server.</li>
+				    <li>Follow the same procedure again, but use the name GameClient and
+				        select GameClient instead of GameServer after clicking Search.</li>
+				    <li>You should now be able to run both the server and the client from
+				        the drop down menu of the Run button in the toolbar, which looks like
+				        a green circle with a white arrow in it.</li>
+				</ol>
+				
+				<h3>How to Run the Game</h3>
+				
+				<ol>
+					<li>You need at least two computers with public IP addresses or connected on a LAN
+					    subnet to play the game.</li>
+					<li>Start the game server on one of the computers. You may enter a new port for
+					    incoming connections or just hit enter to use the default. The game server
+					    should now wait for connections from clients.</li>
+					<li>If you want to use a Wiimote with the game (Mac only), start the modified
+					    Darwiin program on each client computer. This is contained in the darwiin
+					    folder. Hold down the 1 and 2 buttons simultaneously to connect the remote.
+					    Note: A compatible Bluetooth adapter is required to connect a Wiimote.</li>
+					<li>Start the game client on each computer. If the client is running on the
+					    same computer as the server, leave the game server address at the default.
+					    If it is running on another computer, type in the address of the computer
+					    running the server (the server should print this to output when it's started.</li>
+					<li>Make sure the correct port is listed and the frame rate is set to 60.</li>
+					<li>Click "Connect to Server".</li>
+					<li>You should now be able play the game.</li>
+				</ol>
+				
+				<h3>How to Play the Game</h3>
+				
+				<p>The objective is to defeat your opponent by draining their health to zero. The
+				   health is indicated by the green/red bars at the top of the screen. Each swing
+				   of the lightsaber drains your opponent's health if you are close enough to them.</p>
+				   
+				<p>Keyboard Input:<p>
+				
+				<ul>
+					<li>Move left and right: left and right arrow keys</li>
+					<li>Dodge back: down arrow key</li>
+					<li>Block: s key</li>
+					<li>Horizontal swing: d key</li>
+					<li>Vertical swing: f key</li>
+				</ul>
+				
+				<p>Wiimote Input:</p>
+				
+				<ul
+					<li>Move left and right: left and right d-pad buttons</li>
+					<li>Dodge back: down d-pad button</li>
+					<li>Block: up d-pad button</li>
+					<li>Horizontal swing: move the wiimote in a vertical swinging motion</li>
+					<li>Vertical swing: move the wiimote in a horizontal swinging motion</li>
+				</ul>
+			
+		</div>
+		
+		<div id="pageFooter"></div>
+	
+	</div>
+
+</body>
+</html>
