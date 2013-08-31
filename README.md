@@ -1,7 +1,7 @@
 Wong's Wiivenge
 ===============
 
-![Gameplay Screenshot](https://github.com/sddaniels/Wongs-Wiivenge/blob/master/screenshot.jpg "Gameplay Screenshot")
+![Gameplay Screenshot](https://raw.github.com/sddaniels/Wongs-Wiivenge/master/screenshot.jpg "Gameplay Screenshot")
 
 This was the final project for two classes in my last year of college at Iowa State: 
 
